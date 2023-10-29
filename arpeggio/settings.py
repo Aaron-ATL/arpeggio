@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'main_app.middleware.LessonsInViews',
+    'main_app.middleware.LessonsInViews',
 ]
 
 ROOT_URLCONF = 'arpeggio.urls'
@@ -134,7 +134,6 @@ STATIC_ROOT = BASE_DIR / 'static'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 
 def force_download_pdfs(headers, path, _):
     if path.endswith('.pdf'):
