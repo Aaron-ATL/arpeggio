@@ -1,0 +1,55 @@
+<!doctype html>
+{% extends 'main_app/loggedin_base.html' %}
+{% load static %}
+
+{% block body %}
+    <main>
+
+    <section class="pt-0">
+        <div class="container">
+
+            <div class="row mt-3">
+                <!-- Main content START -->
+                <div class="col-12">
+
+                    <!-- Course Grid START -->
+                    <div class="row g-4">
+
+                        {% for lesson in lessons %}
+                        <!-- Card item START -->
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="card shadow h-100">
+                                <!-- Image -->
+                                <a href="{% url 'lesson' lesson.pk %}">
+                                    <img src="{% get_static_prefix %}main_app/thumbnails/{{ lesson.thumbnail_id }}.jpg" class="card-img-top" alt="{{ lesson.title }}">
+                                </a>
+                                <!-- Card body -->
+                                <div class="card-body pb-0">
+                                    <!-- Title -->
+                                    <h5 class="card-title"><a href="{% url 'lesson' lesson.pk %}">{{ lesson.number }}. {{ lesson.title }}</a></h5>
+                                    <!-- Description -->
+                                    <p class="mb-2">{{ lesson.description }}</p>
+                                </div>
+                                <!-- Card footer -->
+                                <div class="card-footer pt-0 pb-3">
+                                    <hr>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>{{ lesson.length }}m</span>
+                                        {% if lesson.has_file %}<a class="h6 fw-light mb-0" target="_blank" href="{% get_static_prefix %}main_app/pdfs/{{ lesson.thumbnail_id }}.pdf"><i class="fa fa-download text-success me-2"></i>Download PDF</a>{% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <!-- Card item END -->
+                    </div>
+                    <!-- Course Grid END -->
+                </div>
+                <!-- Main content END -->
+            </div><!-- Row END -->
+        </div>
+    </section>
+    <!-- =======================
+    Page content END -->
+    </main>
+{% endblock %}

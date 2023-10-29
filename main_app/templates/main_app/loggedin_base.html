@@ -1,0 +1,59 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{% static 'main_app/favicon.png' %}" >
+	<link rel="stylesheet" href="{% static 'main_app/bootstrap-icons/bootstrap-icons.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'main_app/font-awesome/css/all.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main_app/css/bootstrap.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'main_app/css/style-dark.css' %}" />
+
+    {% block extra_links %}
+    {% endblock %}
+  
+    {% block title %}
+      <title>Arpeggio Masterclass by Rick Beato</title>
+    {% endblock %}
+
+    {% block style %}
+    {% endblock style %}
+  </head>
+
+  <body>
+    {% block header %}
+	  <!-- Header START -->
+      <header class="navbar-light navbar-sticky">
+          <!-- Logo Nav START -->
+          <nav class="navbar navbar-expand-lg">
+              <div class="container">
+                <!-- Logo START -->
+                <a class="navbar-brand me-0" href="{% url 'index' %}">
+                    <img class="navbar-brand-item" style="height: 50px;" src="{% static 'main_app/logo-dark.svg' %}" alt="logo">
+                </a>
+                <!-- Logo END -->
+                <div class="navbar-nav ms-2">
+                  <span class="me-3" style="line-height: 2.2;">Logged in as: <b>{{ request.user.username }}</b></span>
+                  {% comment %} <a class="btn btn-sm btn-dark mb-0" href="{% url 'logout' %}"><i class="bi bi-power me-2"></i>Sign out</a> {% endcomment %}
+                </div>
+
+              </div>
+          </nav>
+          <!-- Logo Nav END -->
+      </header>
+    {% endblock %}
+      <!-- Header END -->
+    {% block body %}
+    {% endblock body %}
+
+    <script src="{% static 'main_app/js/bootstrap.bundle.js' %}"></script>
+    {% block script %}
+    {% endblock script %}
+    <script src="{% static 'main_app/js/functions.js' %}"></script>
+
+  </body>
+
+</html>
