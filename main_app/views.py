@@ -9,7 +9,6 @@ class LessonListView(ListView):
     context_object_name = "lessons"
     ordering = ['number']
 
-
 class LessonDetailView(DetailView):
     model = Lesson
     template_name = "main_app/lesson_detail_view.html"
