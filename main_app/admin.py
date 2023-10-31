@@ -1,6 +1,6 @@
-from .models import Lesson
+from .models import Lesson, Profile
 from django.contrib import admin
 
 # Register your models here.
 
-admin.site.register(Lesson)
+admin.site.register([Profile, Lesson])
