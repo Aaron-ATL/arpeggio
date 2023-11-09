@@ -56,7 +56,7 @@
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 161, 161, 168;
-  --bs-body-bg-rgb: 34, 37, 41;
+  --bs-body-bg-rgb: 16, 24, 36;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -65,10 +65,10 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #a1a1a8;
-  --bs-body-bg: #222529;
+  --bs-body-bg: #101824;
   --bs-border-width: 1px;
   --bs-border-style: solid;
-  --bs-border-color: rgba(255, 255, 255, 0.04);
+  --bs-border-color: rgba(176, 12, 12, 0.04);
   --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
   --bs-border-radius: 0.325rem;
   --bs-border-radius-sm: 0.2rem;
@@ -5296,11 +5296,11 @@ textarea.form-control-lg {
   --bs-card-inner-border-radius: 0.5rem;
   --bs-card-cap-padding-y: 1rem;
   --bs-card-cap-padding-x: 1rem;
-  --bs-card-cap-bg: #1b1e21;
+  --bs-card-cap-bg: #182838;
   --bs-card-cap-color: ;
   --bs-card-height: ;
   --bs-card-color: ;
-  --bs-card-bg: #1b1e21;
+  --bs-card-bg: #182838;
   --bs-card-img-overlay-padding: 1.25rem;
   --bs-card-group-margin: 0.9375rem;
   position: relative;
@@ -20515,13 +20515,13 @@ body {
 }
 
 main {
-  background-color: #222529;
+  background-color: #101824;
 }
 
 header {
   position: relative;
   z-index: 1020;
-  background: #222529;
+  background: #101824;
 }
 
 a {
