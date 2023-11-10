@@ -40,9 +40,9 @@
                     <div class="collapse-horizontal collapse show" id="collapseWidthExample" style="">
                         <div class="card vh-100 overflow-auto rounded-0 w-280px w-sm-400px">
                             <!-- Title -->
-                            <div class="card-header rounded-0">
+                            <div class="card-header rounded-0" style="background-color: #151d26;">
                                 <h1 class="mt-2 fs-5 d-inline" style="line-height: 2.5;">Course content</h1>
-                                <a href="{% url 'index' %}"><img src="{% static 'main_app/logo_icon.svg' %}" class="float-end d-inline" style="width: 15%;" alt="logo-icon"/></a>
+                                <a href="{% url 'index' %}"><img src="{% static 'main_app/logo_placeholder_icon.png' %}" class="float-end d-inline" style="width: 10%; margin-top: 7px;" alt="logo-icon"/></a>
                             </div>
 
                             <!-- Course content START -->
@@ -83,7 +83,7 @@
                                                                             <a href="{% get_static_prefix %}main_app/pdfs/{{ lesson.thumbnail_id }}.pdf" class="btn btn-success-soft btn-round btn-sm mb-0 stretched-link position-static">
                                                                                 <i class="fas fa-download me-0"></i>
                                                                             </a>
-                                                                            <span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px">Download Lesson Files</span>
+                                                                            <span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px">Download Files</span>
                                                                         </div>
                                                                     </div>
                                                                 </div>	
@@ -100,7 +100,7 @@
                                 <!-- Course END -->
                             </div>
                             <!-- Course content END -->
-                            <div class="card-footer">
+                            <div class="card-footer" style="background-color: #151d26;">
                                 <div class="d-grid">
                                     <a href="{% url 'index' %}" class="btn btn-primary-soft mb-0">Back to overview</a>
                                 </div>
