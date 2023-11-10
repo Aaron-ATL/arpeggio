@@ -27,7 +27,7 @@
                 <!-- Page content START -->
                 <div class="justify-content-end position-relative">
                     <!-- Collapse button START -->
-                    <button class="navbar-toggler btn mt-4 plyr-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                    <button class="navbar-toggler btn mt-4 plyr-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="true" aria-controls="collapseWidthExample">
                         <span class="navbar-toggler-animation">
                             <span></span>
                             <span></span>
@@ -37,10 +37,10 @@
                     <!-- Collapse button END -->
 
                     <!-- Collapse body START -->
-                    <div class="collapse-horizontal collapse" id="collapseWidthExample" style="">
+                    <div class="collapse-horizontal collapse show" id="collapseWidthExample" style="">
                         <div class="card vh-100 overflow-auto rounded-0 w-280px w-sm-400px">
                             <!-- Title -->
-                            <div class="card-header bg-light rounded-0">
+                            <div class="card-header rounded-0">
                                 <h1 class="mt-2 fs-5 d-inline" style="line-height: 2.5;">Course content</h1>
                                 <a href="{% url 'index' %}"><img src="{% static 'main_app/logo_icon.svg' %}" class="float-end d-inline" style="width: 15%;" alt="logo-icon"/></a>
                             </div>
@@ -81,9 +81,9 @@
                                                                     <div class="d-flex justify-content-between align-items-center mb-2">
                                                                         <div class="position-relative d-flex align-items-center">
                                                                             <a href="{% get_static_prefix %}main_app/pdfs/{{ lesson.thumbnail_id }}.pdf" class="btn btn-success-soft btn-round btn-sm mb-0 stretched-link position-static">
-                                                                                <i class="fas fa-file me-0"></i>
+                                                                                <i class="fas fa-download me-0"></i>
                                                                             </a>
-                                                                            <span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px">Download PDF</span>
+                                                                            <span class="d-inline-block text-truncate ms-2 mb-0 h6 fw-light w-100px w-sm-200px">Download Lesson Files</span>
                                                                         </div>
                                                                     </div>
                                                                 </div>	
