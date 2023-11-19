@@ -8,8 +8,8 @@ from .views import (
 )
 
 urlpatterns = [
-    path('', LessonListView.as_view(), name='index'),
-    path('lesson/<int:pk>/', LessonDetailView.as_view(), name='lesson'),
+    path('', login_required(LessonListView.as_view()), name='index'),
+    path('lesson/<int:pk>/', login_required(LessonDetailView.as_view()), name='lesson'),
     path('accounts/', include('django.contrib.auth.urls')),
     # path('signup/', signup, name='signup'),
     # path('webhook/', webhook),
