@@ -27,6 +27,21 @@ class Profile(models.Model):
         return self.user.username
 
 
+def create_user(email, password, first_name='', last_name=''):
+    if User.objects.filter(username=email).exists():
+        raise ValueError("A user with that email already exists.")
+
+    user = User.objects.create_user(
+        username=email,  # using the email as the username
+        email=email,
+        password=password,
+        first_name=first_name,
+        last_name=last_name
+    )
+    user.save()
+    return user
+
+
 @receiver(post_save, sender=User)
 def update_user_profile(sender, instance, created, **kwargs):
     if created:

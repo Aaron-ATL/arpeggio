@@ -133,15 +133,21 @@ STATIC_ROOT = BASE_DIR / 'static'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGOUT_REDIRECT_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
 
-def force_download_pdfs(headers, path, _):
-    if path.endswith('.pdf'):
-        headers['Content-Disposition'] = 'attachment'
+# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-WHITENOISE_ADD_HEADERS_FUNCTION = force_download_pdfs
+# def force_download_pdfs(headers, path, _):
+#     if path.endswith('.pdf'):
+#         headers['Content-Disposition'] = 'attachment'
+
+# WHITENOISE_ADD_HEADERS_FUNCTION = force_download_pdfs
 
 if IS_HEROKU:
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     SECURE_SSL_REDIRECT = True
     # SHOPIFY_WEBHOOK_SECRET = os.environ["SHOPIFY_WEBHOOK_SECRET"]
+
+DEFAULT_FROM_EMAIL = 'Team Beato Guitar<hello@beatoguitar.com>'
+SHOPIFY_PRODUCT_ID = '7398438731967'
