@@ -65,3 +65,7 @@ textarea:focus {
 ::-ms-input-placeholder { /* Microsoft Edge */
   color: red;
 }
+
+small {
+  text-align: left;
+}

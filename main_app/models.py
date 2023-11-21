@@ -22,4 +22,5 @@ class Lesson(models.Model):
 
 @receiver(post_save, sender=User)
 def send_invite(sender, instance, created, **kwargs):
-    send_activation_email(instance)
+    if created:
+        send_activation_email(instance)
