@@ -5,7 +5,7 @@ from .views import (
     LessonDetailView,
     CustomLoginView,
     # signup,
-    # webhook,
+    webhook,
 )
 
 urlpatterns = [
@@ -14,5 +14,5 @@ urlpatterns = [
     path('accounts/login/', CustomLoginView.as_view(), name='login'),
     path('accounts/', include('django.contrib.auth.urls')),
     # path('signup/', signup, name='signup'),
-    # path('webhook/', webhook),
+    path('webhook/', webhook),
 ]

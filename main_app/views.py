@@ -18,3 +18,6 @@ class LessonDetailView(DetailView):
 
 class CustomLoginView(LoginView):
     authentication_form = CustomAuthenticationForm
+
+def webhook():
+    pass
