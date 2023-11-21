@@ -148,7 +148,7 @@ if IS_HEROKU:
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     SECURE_SSL_REDIRECT = True
     SHOPIFY_WEBHOOK_SECRET = os.environ["SHOPIFY_WEBHOOK_SECRET"]
-    DOMAIN = "beginner.beatoguitar.com"
+    DOMAIN = "arpeggio.beatoguitar.com"
 
 DEFAULT_FROM_EMAIL = 'Team Beato Guitar<hello@beatoguitar.com>'
 SHOPIFY_PRODUCT_IDS = ['7867229372594']

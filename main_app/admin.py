@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 class CustomUserAdmin(UserAdmin):
     add_form = CustomUserCreationForm
     form = CustomUserChangeForm
-    list_display = ('email', 'is_staff')
+    list_display = ('username', 'is_staff')
     list_filter = ('is_staff', 'is_superuser', 'is_active')
     search_fields = ('email',)
     ordering = ('email',)
