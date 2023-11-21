@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm, AuthenticationForm
 from django.contrib.auth.models import User
 
 class CustomUserCreationForm(UserCreationForm):
@@ -31,3 +31,9 @@ class CustomUserChangeForm(UserChangeForm):
         if commit:
             user.save()
         return user
+
+
+class CustomAuthenticationForm(AuthenticationForm):
+    def __init__(self, *args, **kwargs):
+        super(CustomAuthenticationForm, self).__init__(*args, **kwargs)
+        self.fields['username'].label = 'Email address'

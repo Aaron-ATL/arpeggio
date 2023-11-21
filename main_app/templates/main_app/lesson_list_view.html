@@ -21,7 +21,7 @@
                             <div class="card shadow h-100">
                                 <!-- Image -->
                                 <a href="{% url 'lesson' lesson.pk %}">
-                                    <img src="{% get_static_prefix %}main_app/thumbnails/{{ lesson.thumbnail_id }}.jpg" class="card-img-top" alt="{{ lesson.title }}">
+                                    <img src="{% get_static_prefix %}main_app/thumbnails/{{ lesson.thumbnail_id }}.png" class="card-img-top" alt="{{ lesson.title }}">
                                 </a>
                                 <!-- Card body -->
                                 <div class="card-body pb-0">
@@ -35,7 +35,7 @@
                                     <hr>
                                     <div class="d-flex justify-content-between">
                                         <span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>{{ lesson.length }}m</span>
-                                        {% if lesson.has_file %}<a class="h6 fw-light mb-0" target="_blank" href="{% get_static_prefix %}main_app/pdfs/{{ lesson.thumbnail_id }}.pdf"><i class="fa fa-download text-success me-2"></i>Download files</a>{% endif %}
+                                        {% if lesson.has_file %}<a class="h6 fw-light mb-0" target="_blank" href="{% get_static_prefix %}main_app/dl-files/{{ lesson.thumbnail_id }}.zip"><i class="fa fa-download text-success me-2"></i>Download files</a>{% endif %}
                                     </div>
                                 </div>
                             </div>

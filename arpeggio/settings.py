@@ -123,7 +123,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
@@ -138,11 +137,6 @@ LOGIN_REDIRECT_URL = '/'
 
 # DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# def force_download_pdfs(headers, path, _):
-#     if path.endswith('.pdf'):
-#         headers['Content-Disposition'] = 'attachment'
-
-# WHITENOISE_ADD_HEADERS_FUNCTION = force_download_pdfs
 
 if IS_HEROKU:
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
