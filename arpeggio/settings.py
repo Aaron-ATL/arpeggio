@@ -137,11 +137,21 @@ LOGIN_REDIRECT_URL = '/'
 
 # DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey'
+EMAIL_PORT = 587
+EMAIL_HOST_PASSWORD = os.environ["EMAIL_HOST_PASSWORD"]
+DOMAIN = "127.0.0.1"
 
 if IS_HEROKU:
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     SECURE_SSL_REDIRECT = True
-    # SHOPIFY_WEBHOOK_SECRET = os.environ["SHOPIFY_WEBHOOK_SECRET"]
+    SHOPIFY_WEBHOOK_SECRET = os.environ["SHOPIFY_WEBHOOK_SECRET"]
+    DOMAIN = "beginner.beatoguitar.com"
 
 DEFAULT_FROM_EMAIL = 'Team Beato Guitar<hello@beatoguitar.com>'
-SHOPIFY_PRODUCT_ID = '7398438731967'
+SHOPIFY_PRODUCT_IDS = ['7867229372594']
+
+DEFAULT_PW = "temporary1"
+

@@ -1,4 +1,4 @@
-from .models import Lesson, Profile
+from .models import Lesson
 from .forms import CustomUserCreationForm, CustomUserChangeForm
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
@@ -27,4 +27,4 @@ class CustomUserAdmin(UserAdmin):
 
 admin.site.unregister(User)
 admin.site.register(User, CustomUserAdmin)
-admin.site.register([Profile, Lesson])
+admin.site.register(Lesson)
